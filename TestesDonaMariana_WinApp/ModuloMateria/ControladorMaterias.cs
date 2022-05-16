@@ -141,6 +141,13 @@ namespace TestesDonaMariana_WinApp
         {
             Materia materiaSelecionada = ObtemMateriaSelecionada();
 
+            if (materiaSelecionada == null)
+            {
+                MessageBox.Show("Selecione uma Materia primeiro",
+                "Edição de Materias", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
             TelaVerQuestao tela = new TelaVerQuestao(materiaSelecionada);                        
 
             DialogResult resultado = tela.ShowDialog();
