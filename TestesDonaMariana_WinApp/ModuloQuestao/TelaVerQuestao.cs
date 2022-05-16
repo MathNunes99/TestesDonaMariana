@@ -48,6 +48,13 @@ namespace TestesDonaMariana_WinApp.ModuloQuestao
         {
             Questao questaoSelecionada = (Questao)listQuestoes.SelectedItem;
 
+            if (questaoSelecionada == null)
+            {
+                MessageBox.Show("Selecione uma Questão primeiro",
+                "Edição de Questões", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
             foreach (Questao questao in materia.Questoes)
             {
                 if (questao.numero == questaoSelecionada.numero)

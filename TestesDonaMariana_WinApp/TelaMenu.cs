@@ -21,7 +21,7 @@ namespace TestesDonaMariana_WinApp
             this.contextoDados = contextoDados;
 
             InicializarControladores();
-            ConfigurarTelaPrincipal("Disciplinas");
+            ConfigurarTelaPrincipal("Testes");
         }
         private void btnTestes_Click(object sender, EventArgs e)
         {
