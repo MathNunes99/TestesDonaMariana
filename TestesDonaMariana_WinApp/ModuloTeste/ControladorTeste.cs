@@ -1,4 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using iTextSharp.text;
+using iTextSharp.text.pdf;
+using System.Collections.Generic;
+using System.IO;
 using System.Windows.Forms;
 using TestesDonaMariana_WinApp.Compartilhado;
 using TestesDonaMariana_WinApp.ModuloDisciplina;
@@ -111,6 +114,105 @@ namespace TestesDonaMariana_WinApp.ModuloTeste
             var numero = tabelaTeste.ObtemNumeroTesteSelecionado();
 
             return repositorioTeste.SelecionarPorNumero(numero);
+        }
+
+        public void GerarPdf()
+        {
+            Teste testeSelecionado = ObtemTesteSelecionado();
+
+            if (testeSelecionado == null)
+            {
+                MessageBox.Show("Selecione uma Teste primeiro",
+                "Gerar Pdf", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
+            string nomeArquivo = @"C:\temp\dados.pdf";
+
+            FileStream arquivoPdf = new FileStream(nomeArquivo, FileMode.Create);
+            Document doc = new Document(PageSize.A4);
+            PdfWriter escritorPdf = PdfWriter.GetInstance(doc, arquivoPdf);
+
+            doc.Open();
+            string dados = "";
+
+            Paragraph paragrafoTitulo = new Paragraph(dados);
+
+            paragrafoTitulo.Alignment = Element.ALIGN_CENTER;
+            paragrafoTitulo.Add(testeSelecionado.Titulo + "\n");
+            
+
+            Paragraph paragrafoQuestoes = new Paragraph(dados);
+            paragrafoQuestoes.Alignment = Element.ALIGN_LEFT;
+
+
+            int contador = 1;
+            foreach (var questao in testeSelecionado.Questoes)
+            {
+                CriarCelula(questao.titulo);
+
+                paragrafoQuestoes.Add(contador + " - " + questao.titulo + "\n\n");
+                paragrafoQuestoes.Add("A.(  )" + questao.pergunta1 + "\n");
+                paragrafoQuestoes.Add("B.(  )" + questao.pergunta2 + "\n");
+                paragrafoQuestoes.Add("C.(  )" + questao.pergunta3 + "\n");
+                paragrafoQuestoes.Add("D.(  )" + questao.pergunta4 + "\n\n");
+                contador++;
+            }
+
+            doc.Open();
+            doc.Add(paragrafoTitulo);
+            doc.Add(paragrafoQuestoes);
+            doc.Close();
+
+            MessageBox.Show("PDF gerado com sucesso",
+            "Gerãção de PDF", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            return;
+        }
+
+        private static PdfPCell CriarCelula(string texto)
+        {
+            var celula = new PdfPCell(new Phrase("Código"));
+
+            return celula;
+        }
+
+        public void Duplicar()
+        {
+            Teste testeSelecionado = ObtemTesteSelecionado();
+
+            if (testeSelecionado == null)
+            {
+                MessageBox.Show("Selecione um teste primeiro",
+                "Duplicação de Testes", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
+            Teste testeDuplicado = new Teste();
+            CopiaTeste(testeSelecionado, testeDuplicado);
+
+            var disciplinas = repositorioDisciplina.SelecionarTodos();
+            var materias = repositorioMateria.SelecionarTodos();            
+
+            TelaCadastrarTeste tela = new TelaCadastrarTeste(disciplinas, materias);
+            tela.Teste = testeDuplicado;
+
+            tela.GravarRegistro = repositorioTeste.Inserir;
+
+            DialogResult resultado = tela.ShowDialog();
+
+            if (resultado == DialogResult.OK)
+            {
+                CarregarTeste();
+            }
+
+        }
+
+        private static void CopiaTeste(Teste testeSelecionado, Teste testeDuplicado)
+        {
+            testeDuplicado.Titulo = testeSelecionado.Titulo;            
+            testeDuplicado.NQuestoes = testeSelecionado.NQuestoes;
+            testeDuplicado.Serie = testeSelecionado.Serie;
+            testeDuplicado.Questoes = testeSelecionado.Questoes;
         }
     }
 }

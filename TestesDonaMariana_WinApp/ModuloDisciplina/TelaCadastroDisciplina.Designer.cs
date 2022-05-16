@@ -82,6 +82,7 @@
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnCadastrar);
             this.Name = "TelaCadastroDisciplina";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TelaCadastroDisciplina";
             this.ResumeLayout(false);
             this.PerformLayout();

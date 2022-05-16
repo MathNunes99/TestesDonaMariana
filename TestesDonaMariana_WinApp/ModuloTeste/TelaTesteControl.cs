@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 using TestesDonaMariana_WinApp.Compartilhado;
 
@@ -24,6 +25,8 @@ namespace TestesDonaMariana_WinApp.ModuloTeste
                 new DataGridViewTextBoxColumn { DataPropertyName = "Serie", HeaderText = "Série"},
 
                 new DataGridViewTextBoxColumn { DataPropertyName = "Nº de Questoes", HeaderText = "Nº de Questões"},
+
+                new DataGridViewTextBoxColumn { DataPropertyName = "Gabarito", HeaderText = "Gabarito"},
             };
 
             return colunas;
@@ -33,10 +36,11 @@ namespace TestesDonaMariana_WinApp.ModuloTeste
             grid.Rows.Clear();
 
             foreach (var teste in testes)
-            {
-                grid.Rows.Add(teste.Numero, teste.Titulo, teste.Serie, teste.NQuestoes);
+            {                
+                grid.Rows.Add(teste.Numero, teste.Titulo, teste.Serie, teste.NQuestoes, teste.Gabarito);
             }
-        }
+        }        
+
         public int ObtemNumeroTesteSelecionado()
         {
             return grid.SelecionarNumero<int>();

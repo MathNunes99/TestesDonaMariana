@@ -102,7 +102,16 @@ namespace TestesDonaMariana_WinApp.ModuloTeste
             Teste.Serie = VerificarCheckBox();
             Teste.Questoes = listQuestoesTeste.Items.Cast<Questao>().ToList();
             Teste.NQuestoes = Teste.Questoes.Count();
+            
+            foreach (Questao questao in Teste.Questoes)
+            {
+                Teste.Gabarito = Teste.Gabarito + " " + questao.gabarito.ToString();
+            }
 
+            if (Teste.NQuestoes == 0)
+            {
+                DialogResult = DialogResult.None;
+            }
 
             var resultadoValidacao = GravarRegistro(Teste);
 

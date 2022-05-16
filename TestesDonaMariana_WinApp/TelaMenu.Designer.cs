@@ -34,13 +34,17 @@
             this.btnInserir = new System.Windows.Forms.ToolStripButton();
             this.btnEditar = new System.Windows.Forms.ToolStripButton();
             this.btnExcluir = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.btnInserirQuestoes = new System.Windows.Forms.ToolStripButton();
             this.btnVerQuestoes = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.btnGerarPDF = new System.Windows.Forms.ToolStripButton();
             this.label1 = new System.Windows.Forms.Label();
             this.btnTestes = new System.Windows.Forms.Button();
             this.btnDisciplinas = new System.Windows.Forms.Button();
             this.btnMaterias = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnDuplicar = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -60,12 +64,16 @@
             this.btnInserir,
             this.btnEditar,
             this.btnExcluir,
+            this.toolStripSeparator1,
             this.btnInserirQuestoes,
-            this.btnVerQuestoes});
+            this.btnVerQuestoes,
+            this.toolStripSeparator2,
+            this.btnGerarPDF,
+            this.btnDuplicar});
             this.toolStrip1.Location = new System.Drawing.Point(140, 35);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStrip1.Size = new System.Drawing.Size(368, 41);
+            this.toolStrip1.Size = new System.Drawing.Size(487, 41);
             this.toolStrip1.TabIndex = 5;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -105,6 +113,11 @@
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 41);
+            // 
             // btnInserirQuestoes
             // 
             this.btnInserirQuestoes.Enabled = false;
@@ -129,6 +142,23 @@
             this.btnVerQuestoes.Size = new System.Drawing.Size(113, 38);
             this.btnVerQuestoes.Text = "Ver Questões";
             this.btnVerQuestoes.Click += new System.EventHandler(this.btnVerQuestoes_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 41);
+            // 
+            // btnGerarPDF
+            // 
+            this.btnGerarPDF.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnGerarPDF.Image = global::TestesDonaMariana_WinApp.Properties.Resources.picture_as_pdf_FILL0_wght400_GRAD0_opsz24;
+            this.btnGerarPDF.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.btnGerarPDF.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnGerarPDF.Name = "btnGerarPDF";
+            this.btnGerarPDF.Padding = new System.Windows.Forms.Padding(5);
+            this.btnGerarPDF.Size = new System.Drawing.Size(38, 38);
+            this.btnGerarPDF.Text = "toolStripButton1";
+            this.btnGerarPDF.Click += new System.EventHandler(this.btnGerarPDF_Click);
             // 
             // label1
             // 
@@ -214,6 +244,18 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // btnDuplicar
+            // 
+            this.btnDuplicar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnDuplicar.Image = global::TestesDonaMariana_WinApp.Properties.Resources.copy_all_FILL0_wght400_GRAD0_opsz24;
+            this.btnDuplicar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.btnDuplicar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnDuplicar.Name = "btnDuplicar";
+            this.btnDuplicar.Padding = new System.Windows.Forms.Padding(5);
+            this.btnDuplicar.Size = new System.Drawing.Size(38, 38);
+            this.btnDuplicar.Text = "toolStripButton1";
+            this.btnDuplicar.Click += new System.EventHandler(this.btnDuplicar_Click);
+            // 
             // TelaMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -255,5 +297,9 @@
         private System.Windows.Forms.ToolStripButton btnExcluir;
         private System.Windows.Forms.ToolStripButton btnInserirQuestoes;
         private System.Windows.Forms.ToolStripButton btnVerQuestoes;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripButton btnGerarPDF;
+        private System.Windows.Forms.ToolStripButton btnDuplicar;
     }
 }

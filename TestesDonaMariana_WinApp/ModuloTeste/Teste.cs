@@ -14,6 +14,7 @@ namespace TestesDonaMariana_WinApp
         public string Titulo { get; set; }
         public int NQuestoes { get; set; }
         public int Serie { get; set; }
+        public string Gabarito { get; set; }
         public List<Questao> Questoes { get; set; }
 
         public Func<Materia, ValidationResult> GravarRegistro { get; set; }

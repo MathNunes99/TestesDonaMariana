@@ -48,11 +48,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(94, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 15);
+            this.label1.Size = new System.Drawing.Size(216, 15);
             this.label1.TabIndex = 1;
-            this.label1.Text = "label1";
+            this.label1.Text = "Clique em Editar para ver as alternativas";
             // 
             // btnEditar
             // 
@@ -95,6 +95,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.listQuestoes);
             this.Name = "TelaVerQuestao";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TelaVerQuestao";
             this.ResumeLayout(false);
             this.PerformLayout();

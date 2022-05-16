@@ -63,6 +63,7 @@
             // comboDisciplina
             // 
             this.comboDisciplina.DisplayMember = "Titulo";
+            this.comboDisciplina.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboDisciplina.FormattingEnabled = true;
             this.comboDisciplina.Location = new System.Drawing.Point(110, 111);
             this.comboDisciplina.Name = "comboDisciplina";
@@ -145,6 +146,7 @@
             this.Controls.Add(this.txtTitulo);
             this.Controls.Add(this.label1);
             this.Name = "TelaCadastroMateria";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TelaCadastroMateria";
             this.ResumeLayout(false);
             this.PerformLayout();

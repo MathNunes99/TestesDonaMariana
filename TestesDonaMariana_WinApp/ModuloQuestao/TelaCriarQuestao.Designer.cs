@@ -40,6 +40,7 @@
             this.txtPergunta4 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtTitulo = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnCadastrar
@@ -157,11 +158,21 @@
             this.txtTitulo.Size = new System.Drawing.Size(399, 83);
             this.txtTitulo.TabIndex = 2;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(36, 313);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(168, 15);
+            this.label5.TabIndex = 32;
+            this.label5.Text = "(Todos os campos obrigatório)";
+            // 
             // TelaCriarQuestao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(502, 407);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.txtTitulo);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtPergunta4);
@@ -175,6 +186,7 @@
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnCadastrar);
             this.Name = "TelaCriarQuestao";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TelaCriarQuestao";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -195,5 +207,6 @@
         private System.Windows.Forms.TextBox txtPergunta4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtTitulo;
+        private System.Windows.Forms.Label label5;
     }
 }

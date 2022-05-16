@@ -28,6 +28,8 @@ namespace TestesDonaMariana_WinApp
             ConfigurarTelaPrincipal("Testes");
             btnInserirQuestoes.Enabled = false;
             btnVerQuestoes.Enabled = false;
+            btnGerarPDF.Enabled = true;
+            btnDuplicar.Enabled = true;
         }
 
         private void btnDisciplinas_Click(object sender, EventArgs e)
@@ -35,6 +37,8 @@ namespace TestesDonaMariana_WinApp
             ConfigurarTelaPrincipal("Disciplinas");
             btnInserirQuestoes.Enabled = false;
             btnVerQuestoes.Enabled = false;
+            btnGerarPDF.Enabled = false;
+            btnDuplicar.Enabled = false;
         }
 
         private void btnMaterias_Click(object sender, EventArgs e)
@@ -42,6 +46,8 @@ namespace TestesDonaMariana_WinApp
             ConfigurarTelaPrincipal("Materias");
             btnInserirQuestoes.Enabled = true;
             btnVerQuestoes.Enabled = true;
+            btnGerarPDF.Enabled = false;
+            btnDuplicar.Enabled = false;
         }
 
         private void ConfigurarTelaPrincipal(string tipo)
@@ -100,6 +106,14 @@ namespace TestesDonaMariana_WinApp
             controlador.VerQuestoes();
         }
 
-        
+        private void btnGerarPDF_Click(object sender, EventArgs e)
+        {
+            ((ControladorTeste)controlador).GerarPdf();
+        }
+
+        private void btnDuplicar_Click(object sender, EventArgs e)
+        {
+            ((ControladorTeste)controlador).Duplicar();
+        }
     }
 }

@@ -47,6 +47,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnRemover = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // checkBox1
@@ -136,6 +137,7 @@
             // comboDisciplina
             // 
             this.comboDisciplina.DisplayMember = "Titulo";
+            this.comboDisciplina.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboDisciplina.FormattingEnabled = true;
             this.comboDisciplina.Location = new System.Drawing.Point(554, 59);
             this.comboDisciplina.Name = "comboDisciplina";
@@ -166,6 +168,7 @@
             // comboMaterias
             // 
             this.comboMaterias.DisplayMember = "Titulo";
+            this.comboMaterias.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboMaterias.FormattingEnabled = true;
             this.comboMaterias.Location = new System.Drawing.Point(554, 88);
             this.comboMaterias.Name = "comboMaterias";
@@ -239,11 +242,21 @@
             this.btnRemover.UseVisualStyleBackColor = true;
             this.btnRemover.Click += new System.EventHandler(this.btnRemover_Click);
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(86, 127);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(76, 15);
+            this.label9.TabIndex = 45;
+            this.label9.Text = "(Obrigatório)";
+            // 
             // TelaCadastrarTeste
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(749, 459);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.btnRemover);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label8);
@@ -264,6 +277,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.checkBox1);
             this.Name = "TelaCadastrarTeste";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TelaCadastrarTeste";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -290,5 +304,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnRemover;
+        private System.Windows.Forms.Label label9;
     }
 }
