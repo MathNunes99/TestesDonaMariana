@@ -51,6 +51,7 @@ namespace TestesDonaMariana_WinApp.ModuloTeste
 
         private void CarregarComboBox()
         {
+            comboDisciplina.Items.Add("Todos");
             foreach (Disciplina disciplina in disciplinas)
             {
                 comboDisciplina.Items.Add(disciplina);
@@ -58,7 +59,7 @@ namespace TestesDonaMariana_WinApp.ModuloTeste
             foreach (Materia materia in materias)
             {
                 comboMaterias.Items.Add(materia);
-            }
+            }            
         }
         private void CarregarListaQuestoes()
         {
@@ -133,6 +134,12 @@ namespace TestesDonaMariana_WinApp.ModuloTeste
 
         private void comboDisciplina_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (comboDisciplina.SelectedItem == "Todos")
+            {
+                listQuestoesDisponiveis.Items.Clear();
+                CarregarListaQuestoes();
+                return;
+            }
             comboMaterias.Items.Clear();
             listQuestoesDisponiveis.Items.Clear();
             foreach (Materia materia in materias)
