@@ -165,6 +165,10 @@ namespace TestesDonaMariana_WinApp.ModuloTeste
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            if (listQuestoesTeste.Items.Contains(listQuestoesDisponiveis.SelectedItem))
+            {
+                return;
+            }
             listQuestoesTeste.Items.Add(listQuestoesDisponiveis.SelectedItem);
         }
 
