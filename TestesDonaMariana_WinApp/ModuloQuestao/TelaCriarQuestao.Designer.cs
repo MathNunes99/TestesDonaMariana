@@ -28,115 +28,116 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.btnCadastrar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.checkBoxA = new System.Windows.Forms.CheckBox();
+            this.checkBoxB = new System.Windows.Forms.CheckBox();
+            this.checkBoxC = new System.Windows.Forms.CheckBox();
+            this.checkBoxD = new System.Windows.Forms.CheckBox();
+            this.txtPergunta1 = new System.Windows.Forms.TextBox();
+            this.txtPergunta2 = new System.Windows.Forms.TextBox();
+            this.txtPergunta3 = new System.Windows.Forms.TextBox();
+            this.txtPergunta4 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.txtTitulo = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // button1
+            // btnCadastrar
             // 
-            this.button1.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.button1.Location = new System.Drawing.Point(187, 417);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(143, 41);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Cadastrar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnCadastrar.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.btnCadastrar.Location = new System.Drawing.Point(199, 354);
+            this.btnCadastrar.Name = "btnCadastrar";
+            this.btnCadastrar.Size = new System.Drawing.Size(143, 41);
+            this.btnCadastrar.TabIndex = 11;
+            this.btnCadastrar.Text = "Cadastrar";
+            this.btnCadastrar.UseVisualStyleBackColor = true;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
-            // button2
+            // btnCancelar
             // 
-            this.button2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button2.Location = new System.Drawing.Point(335, 417);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(143, 41);
-            this.button2.TabIndex = 12;
-            this.button2.Text = "Cancelar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnCancelar.Location = new System.Drawing.Point(347, 354);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(143, 41);
+            this.btnCancelar.TabIndex = 12;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
             // 
-            // checkBox1
+            // checkBoxA
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(36, 125);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(37, 19);
-            this.checkBox1.TabIndex = 7;
-            this.checkBox1.Text = "A.";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBoxA.AutoSize = true;
+            this.checkBoxA.Location = new System.Drawing.Point(36, 125);
+            this.checkBoxA.Name = "checkBoxA";
+            this.checkBoxA.Size = new System.Drawing.Size(37, 19);
+            this.checkBoxA.TabIndex = 7;
+            this.checkBoxA.Text = "A.";
+            this.checkBoxA.UseVisualStyleBackColor = true;
+            this.checkBoxA.Click += new System.EventHandler(this.checkBoxA_Click);
             // 
-            // checkBox2
+            // checkBoxB
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(36, 173);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(36, 19);
-            this.checkBox2.TabIndex = 8;
-            this.checkBox2.Text = "B.";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBoxB.AutoSize = true;
+            this.checkBoxB.Location = new System.Drawing.Point(36, 173);
+            this.checkBoxB.Name = "checkBoxB";
+            this.checkBoxB.Size = new System.Drawing.Size(36, 19);
+            this.checkBoxB.TabIndex = 8;
+            this.checkBoxB.Text = "B.";
+            this.checkBoxB.UseVisualStyleBackColor = true;
+            this.checkBoxB.Click += new System.EventHandler(this.checkBoxB_Click);
             // 
-            // checkBox3
+            // checkBoxC
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(36, 221);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(37, 19);
-            this.checkBox3.TabIndex = 9;
-            this.checkBox3.Text = "C.";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.checkBoxC.AutoSize = true;
+            this.checkBoxC.Location = new System.Drawing.Point(36, 221);
+            this.checkBoxC.Name = "checkBoxC";
+            this.checkBoxC.Size = new System.Drawing.Size(37, 19);
+            this.checkBoxC.TabIndex = 9;
+            this.checkBoxC.Text = "C.";
+            this.checkBoxC.UseVisualStyleBackColor = true;
+            this.checkBoxC.Click += new System.EventHandler(this.checkBoxC_Click);
             // 
-            // checkBox4
+            // checkBoxD
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(36, 269);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(37, 19);
-            this.checkBox4.TabIndex = 10;
-            this.checkBox4.Text = "D.";
-            this.checkBox4.UseVisualStyleBackColor = true;
+            this.checkBoxD.AutoSize = true;
+            this.checkBoxD.Location = new System.Drawing.Point(36, 269);
+            this.checkBoxD.Name = "checkBoxD";
+            this.checkBoxD.Size = new System.Drawing.Size(37, 19);
+            this.checkBoxD.TabIndex = 10;
+            this.checkBoxD.Text = "D.";
+            this.checkBoxD.UseVisualStyleBackColor = true;
+            this.checkBoxD.Click += new System.EventHandler(this.checkBoxD_Click);
             // 
-            // textBox1
+            // txtPergunta1
             // 
-            this.textBox1.Location = new System.Drawing.Point(79, 114);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(399, 37);
-            this.textBox1.TabIndex = 3;
+            this.txtPergunta1.Location = new System.Drawing.Point(79, 114);
+            this.txtPergunta1.Multiline = true;
+            this.txtPergunta1.Name = "txtPergunta1";
+            this.txtPergunta1.Size = new System.Drawing.Size(399, 37);
+            this.txtPergunta1.TabIndex = 3;
             // 
-            // textBox2
+            // txtPergunta2
             // 
-            this.textBox2.Location = new System.Drawing.Point(79, 162);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(399, 37);
-            this.textBox2.TabIndex = 4;
+            this.txtPergunta2.Location = new System.Drawing.Point(79, 162);
+            this.txtPergunta2.Multiline = true;
+            this.txtPergunta2.Name = "txtPergunta2";
+            this.txtPergunta2.Size = new System.Drawing.Size(399, 37);
+            this.txtPergunta2.TabIndex = 4;
             // 
-            // textBox3
+            // txtPergunta3
             // 
-            this.textBox3.Location = new System.Drawing.Point(79, 210);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(399, 37);
-            this.textBox3.TabIndex = 5;
+            this.txtPergunta3.Location = new System.Drawing.Point(79, 210);
+            this.txtPergunta3.Multiline = true;
+            this.txtPergunta3.Name = "txtPergunta3";
+            this.txtPergunta3.Size = new System.Drawing.Size(399, 37);
+            this.txtPergunta3.TabIndex = 5;
             // 
-            // textBox4
+            // txtPergunta4
             // 
-            this.textBox4.Location = new System.Drawing.Point(79, 258);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(399, 37);
-            this.textBox4.TabIndex = 6;
+            this.txtPergunta4.Location = new System.Drawing.Point(79, 258);
+            this.txtPergunta4.Multiline = true;
+            this.txtPergunta4.Name = "txtPergunta4";
+            this.txtPergunta4.Size = new System.Drawing.Size(399, 37);
+            this.txtPergunta4.TabIndex = 6;
             // 
             // label1
             // 
@@ -148,71 +149,31 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Título";
             // 
-            // textBox5
+            // txtTitulo
             // 
-            this.textBox5.Location = new System.Drawing.Point(79, 14);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(399, 83);
-            this.textBox5.TabIndex = 2;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(24, 323);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 19);
-            this.label2.TabIndex = 13;
-            this.label2.Text = "Dísciplina";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(24, 363);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(64, 19);
-            this.label3.TabIndex = 14;
-            this.label3.Text = "Matéria";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(126, 323);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(352, 23);
-            this.comboBox1.TabIndex = 15;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(126, 363);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(352, 23);
-            this.comboBox2.TabIndex = 16;
+            this.txtTitulo.Location = new System.Drawing.Point(79, 14);
+            this.txtTitulo.Multiline = true;
+            this.txtTitulo.Name = "txtTitulo";
+            this.txtTitulo.Size = new System.Drawing.Size(399, 83);
+            this.txtTitulo.TabIndex = 2;
             // 
             // TelaCriarQuestao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(502, 470);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox5);
+            this.ClientSize = new System.Drawing.Size(502, 407);
+            this.Controls.Add(this.txtTitulo);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.checkBox4);
-            this.Controls.Add(this.checkBox3);
-            this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.txtPergunta4);
+            this.Controls.Add(this.txtPergunta3);
+            this.Controls.Add(this.txtPergunta2);
+            this.Controls.Add(this.txtPergunta1);
+            this.Controls.Add(this.checkBoxD);
+            this.Controls.Add(this.checkBoxC);
+            this.Controls.Add(this.checkBoxB);
+            this.Controls.Add(this.checkBoxA);
+            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.btnCadastrar);
             this.Name = "TelaCriarQuestao";
             this.Text = "TelaCriarQuestao";
             this.ResumeLayout(false);
@@ -222,21 +183,17 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Button btnCadastrar;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.CheckBox checkBoxA;
+        private System.Windows.Forms.CheckBox checkBoxB;
+        private System.Windows.Forms.CheckBox checkBoxC;
+        private System.Windows.Forms.CheckBox checkBoxD;
+        private System.Windows.Forms.TextBox txtPergunta1;
+        private System.Windows.Forms.TextBox txtPergunta2;
+        private System.Windows.Forms.TextBox txtPergunta3;
+        private System.Windows.Forms.TextBox txtPergunta4;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.TextBox txtTitulo;
     }
 }

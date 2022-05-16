@@ -28,44 +28,46 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnCadastrar = new System.Windows.Forms.Button();
+            this.comboDisciplina = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.cBox2Serie = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.cBox1Serie = new System.Windows.Forms.CheckBox();
+            this.txtTitulo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // button2
+            // btnCancelar
             // 
-            this.button2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button2.Location = new System.Drawing.Point(283, 156);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(143, 41);
-            this.button2.TabIndex = 37;
-            this.button2.Text = "Cancelar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnCancelar.Location = new System.Drawing.Point(283, 156);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(143, 41);
+            this.btnCancelar.TabIndex = 37;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnCadastrar
             // 
-            this.button1.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.button1.Location = new System.Drawing.Point(135, 156);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(143, 41);
-            this.button1.TabIndex = 36;
-            this.button1.Text = "Cadastrar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnCadastrar.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.btnCadastrar.Location = new System.Drawing.Point(135, 156);
+            this.btnCadastrar.Name = "btnCadastrar";
+            this.btnCadastrar.Size = new System.Drawing.Size(143, 41);
+            this.btnCadastrar.TabIndex = 36;
+            this.btnCadastrar.Text = "Cadastrar";
+            this.btnCadastrar.UseVisualStyleBackColor = true;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click_1);
             // 
-            // comboBox1
+            // comboDisciplina
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(110, 111);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(316, 23);
-            this.comboBox1.TabIndex = 35;
+            this.comboDisciplina.DisplayMember = "Titulo";
+            this.comboDisciplina.FormattingEnabled = true;
+            this.comboDisciplina.Location = new System.Drawing.Point(110, 111);
+            this.comboDisciplina.Name = "comboDisciplina";
+            this.comboDisciplina.Size = new System.Drawing.Size(316, 23);
+            this.comboDisciplina.TabIndex = 35;
             // 
             // label3
             // 
@@ -77,16 +79,17 @@
             this.label3.TabIndex = 34;
             this.label3.Text = "Disciplina";
             // 
-            // checkBox2
+            // cBox2Serie
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.checkBox2.Location = new System.Drawing.Point(235, 69);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(82, 22);
-            this.checkBox2.TabIndex = 33;
-            this.checkBox2.Text = "2º Série";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.cBox2Serie.AutoSize = true;
+            this.cBox2Serie.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.cBox2Serie.Location = new System.Drawing.Point(235, 69);
+            this.cBox2Serie.Name = "cBox2Serie";
+            this.cBox2Serie.Size = new System.Drawing.Size(82, 22);
+            this.cBox2Serie.TabIndex = 33;
+            this.cBox2Serie.Text = "2º Série";
+            this.cBox2Serie.UseVisualStyleBackColor = true;
+            this.cBox2Serie.Click += new System.EventHandler(this.cBox2Serie_Click);
             // 
             // label2
             // 
@@ -98,23 +101,24 @@
             this.label2.TabIndex = 32;
             this.label2.Text = "Série";
             // 
-            // checkBox1
+            // cBox1Serie
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.checkBox1.Location = new System.Drawing.Point(110, 69);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(82, 22);
-            this.checkBox1.TabIndex = 31;
-            this.checkBox1.Text = "1º Série";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.cBox1Serie.AutoSize = true;
+            this.cBox1Serie.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.cBox1Serie.Location = new System.Drawing.Point(110, 69);
+            this.cBox1Serie.Name = "cBox1Serie";
+            this.cBox1Serie.Size = new System.Drawing.Size(82, 22);
+            this.cBox1Serie.TabIndex = 31;
+            this.cBox1Serie.Text = "1º Série";
+            this.cBox1Serie.UseVisualStyleBackColor = true;
+            this.cBox1Serie.Click += new System.EventHandler(this.cBox1Serie_Click);
             // 
-            // textBox1
+            // txtTitulo
             // 
-            this.textBox1.Location = new System.Drawing.Point(110, 21);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(316, 23);
-            this.textBox1.TabIndex = 30;
+            this.txtTitulo.Location = new System.Drawing.Point(110, 21);
+            this.txtTitulo.Name = "txtTitulo";
+            this.txtTitulo.Size = new System.Drawing.Size(316, 23);
+            this.txtTitulo.TabIndex = 30;
             // 
             // label1
             // 
@@ -131,14 +135,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(437, 209);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.btnCadastrar);
+            this.Controls.Add(this.comboDisciplina);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.checkBox2);
+            this.Controls.Add(this.cBox2Serie);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.cBox1Serie);
+            this.Controls.Add(this.txtTitulo);
             this.Controls.Add(this.label1);
             this.Name = "TelaCadastroMateria";
             this.Text = "TelaCadastroMateria";
@@ -149,14 +153,14 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button btnCadastrar;
+        private System.Windows.Forms.ComboBox comboDisciplina;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox cBox2Serie;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.CheckBox cBox1Serie;
+        private System.Windows.Forms.TextBox txtTitulo;
         private System.Windows.Forms.Label label1;
     }
 }

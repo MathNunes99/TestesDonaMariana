@@ -29,48 +29,43 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaMenu));
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelRegistros = new System.Windows.Forms.Panel();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnInserir = new System.Windows.Forms.ToolStripButton();
             this.btnEditar = new System.Windows.Forms.ToolStripButton();
             this.btnExcluir = new System.Windows.Forms.ToolStripButton();
             this.btnInserirQuestoes = new System.Windows.Forms.ToolStripButton();
+            this.btnVerQuestoes = new System.Windows.Forms.ToolStripButton();
             this.label1 = new System.Windows.Forms.Label();
             this.btnTestes = new System.Windows.Forms.Button();
             this.btnDisciplinas = new System.Windows.Forms.Button();
             this.btnMaterias = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.panel1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
+            // panelRegistros
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.toolStrip1);
-            this.panel1.Location = new System.Drawing.Point(140, 34);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(802, 596);
-            this.panel1.TabIndex = 0;
+            this.panelRegistros.BackColor = System.Drawing.Color.White;
+            this.panelRegistros.Location = new System.Drawing.Point(140, 75);
+            this.panelRegistros.Name = "panelRegistros";
+            this.panelRegistros.Size = new System.Drawing.Size(802, 557);
+            this.panelRegistros.TabIndex = 0;
             // 
             // toolStrip1
             // 
+            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnInserir,
             this.btnEditar,
             this.btnExcluir,
-            this.btnInserirQuestoes});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.btnInserirQuestoes,
+            this.btnVerQuestoes});
+            this.toolStrip1.Location = new System.Drawing.Point(140, 35);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStrip1.Size = new System.Drawing.Size(802, 41);
+            this.toolStrip1.Size = new System.Drawing.Size(368, 41);
             this.toolStrip1.TabIndex = 5;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -84,6 +79,7 @@
             this.btnInserir.Padding = new System.Windows.Forms.Padding(5);
             this.btnInserir.Size = new System.Drawing.Size(38, 38);
             this.btnInserir.Text = "Inserir";
+            this.btnInserir.Click += new System.EventHandler(this.btnInserir_Click);
             // 
             // btnEditar
             // 
@@ -95,6 +91,7 @@
             this.btnEditar.Padding = new System.Windows.Forms.Padding(5);
             this.btnEditar.Size = new System.Drawing.Size(38, 38);
             this.btnEditar.Text = "Editar";
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnExcluir
             // 
@@ -106,19 +103,32 @@
             this.btnExcluir.Padding = new System.Windows.Forms.Padding(5);
             this.btnExcluir.Size = new System.Drawing.Size(38, 38);
             this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnInserirQuestoes
             // 
-            this.btnInserirQuestoes.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.btnInserirQuestoes.Enabled = false;
             this.btnInserirQuestoes.Image = global::TestesDonaMariana_WinApp.Properties.Resources.post_add_FILL0_wght400_GRAD0_opsz24;
             this.btnInserirQuestoes.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnInserirQuestoes.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnInserirQuestoes.Name = "btnInserirQuestoes";
             this.btnInserirQuestoes.Padding = new System.Windows.Forms.Padding(5);
-            this.btnInserirQuestoes.Size = new System.Drawing.Size(38, 38);
+            this.btnInserirQuestoes.Size = new System.Drawing.Size(129, 38);
             this.btnInserirQuestoes.Text = "Inserir Questões";
             this.btnInserirQuestoes.ToolTipText = "Adicionar Questões";
+            this.btnInserirQuestoes.Click += new System.EventHandler(this.btnInserirQuestoes_Click);
+            // 
+            // btnVerQuestoes
+            // 
+            this.btnVerQuestoes.Enabled = false;
+            this.btnVerQuestoes.Image = global::TestesDonaMariana_WinApp.Properties.Resources.file_open_FILL0_wght400_GRAD0_opsz24;
+            this.btnVerQuestoes.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.btnVerQuestoes.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnVerQuestoes.Name = "btnVerQuestoes";
+            this.btnVerQuestoes.Padding = new System.Windows.Forms.Padding(5);
+            this.btnVerQuestoes.Size = new System.Drawing.Size(113, 38);
+            this.btnVerQuestoes.Text = "Ver Questões";
+            this.btnVerQuestoes.Click += new System.EventHandler(this.btnVerQuestoes_Click);
             // 
             // label1
             // 
@@ -140,6 +150,8 @@
             this.btnTestes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTestes.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnTestes.ForeColor = System.Drawing.Color.Black;
+            this.btnTestes.Image = ((System.Drawing.Image)(resources.GetObject("btnTestes.Image")));
+            this.btnTestes.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnTestes.Location = new System.Drawing.Point(0, 160);
             this.btnTestes.Name = "btnTestes";
             this.btnTestes.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -148,6 +160,7 @@
             this.btnTestes.Text = "Testes";
             this.btnTestes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTestes.UseVisualStyleBackColor = false;
+            this.btnTestes.Click += new System.EventHandler(this.btnTestes_Click);
             // 
             // btnDisciplinas
             // 
@@ -158,6 +171,8 @@
             this.btnDisciplinas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDisciplinas.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnDisciplinas.ForeColor = System.Drawing.Color.Black;
+            this.btnDisciplinas.Image = ((System.Drawing.Image)(resources.GetObject("btnDisciplinas.Image")));
+            this.btnDisciplinas.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDisciplinas.Location = new System.Drawing.Point(0, 213);
             this.btnDisciplinas.Name = "btnDisciplinas";
             this.btnDisciplinas.Size = new System.Drawing.Size(141, 36);
@@ -165,6 +180,7 @@
             this.btnDisciplinas.Text = "Disciplinas";
             this.btnDisciplinas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDisciplinas.UseVisualStyleBackColor = false;
+            this.btnDisciplinas.Click += new System.EventHandler(this.btnDisciplinas_Click);
             // 
             // btnMaterias
             // 
@@ -175,6 +191,8 @@
             this.btnMaterias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMaterias.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnMaterias.ForeColor = System.Drawing.Color.Black;
+            this.btnMaterias.Image = ((System.Drawing.Image)(resources.GetObject("btnMaterias.Image")));
+            this.btnMaterias.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnMaterias.Location = new System.Drawing.Point(0, 267);
             this.btnMaterias.Name = "btnMaterias";
             this.btnMaterias.Size = new System.Drawing.Size(141, 36);
@@ -182,6 +200,7 @@
             this.btnMaterias.Text = "Matérias";
             this.btnMaterias.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMaterias.UseVisualStyleBackColor = false;
+            this.btnMaterias.Click += new System.EventHandler(this.btnMaterias_Click);
             // 
             // pictureBox1
             // 
@@ -195,56 +214,15 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox2.Enabled = false;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(100, 164);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(36, 28);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Gray;
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox3.Enabled = false;
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(106, 218);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(26, 28);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 3;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.Color.Gray;
-            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox4.Enabled = false;
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(105, 270);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(26, 28);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 4;
-            this.pictureBox4.TabStop = false;
-            // 
             // TelaMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(942, 630);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelRegistros);
             this.Controls.Add(this.btnMaterias);
             this.Controls.Add(this.btnDisciplinas);
             this.Controls.Add(this.label1);
@@ -255,14 +233,9 @@
             this.Name = "TelaMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TelaMenu";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -270,19 +243,17 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelRegistros;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnTestes;
         private System.Windows.Forms.Button btnDisciplinas;
         private System.Windows.Forms.Button btnMaterias;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton btnInserir;
         private System.Windows.Forms.ToolStripButton btnEditar;
         private System.Windows.Forms.ToolStripButton btnExcluir;
         private System.Windows.Forms.ToolStripButton btnInserirQuestoes;
+        private System.Windows.Forms.ToolStripButton btnVerQuestoes;
     }
 }
