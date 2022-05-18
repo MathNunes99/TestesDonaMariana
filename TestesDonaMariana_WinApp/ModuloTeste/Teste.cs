@@ -12,6 +12,8 @@ namespace TestesDonaMariana_WinApp
         {
         }
         public string Titulo { get; set; }
+        public Disciplina Disciplina { get; set; }
+        public DateTime Criacao { get; set; }
         public int NQuestoes { get; set; }
         public int Serie { get; set; }
         public string Gabarito { get; set; }
