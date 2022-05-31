@@ -72,7 +72,7 @@ namespace TestesDonaMariana_WinApp.BancoDeDados
                                                         CM.[NUMERO] = @NUMERO";
 
         private const string sqlSelecionarQuestoesMateria = @"SELECT
-                                                                [NUMERO],
+                                                                [MATERIA_NUMERO],
                                                                 [TITULO],
                                                                 [GABARITO],
                                                                 [PERGUNTA1],
