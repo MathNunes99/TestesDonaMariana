@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Windows.Forms;
 using TestesDonaMariana_WinApp.Arquivos;
+using TestesDonaMariana_WinApp.BancoDeDados;
 using TestesDonaMariana_WinApp.Compartilhado;
 using TestesDonaMariana_WinApp.ModuloDisciplina;
 using TestesDonaMariana_WinApp.ModuloTeste;
@@ -70,8 +71,9 @@ namespace TestesDonaMariana_WinApp
 
         private void InicializarControladores()
         {
-            var repositorioDisciplina = new RepositorioDisciplinaEmArquivo(contextoDados);
-            var repositorioMateria = new RepositorioMateriaEmArquivo(contextoDados);
+            var repositorioDisciplina = new RepositorioDisciplinaBancoDeDados();
+            var repositorioMateria = new RepositorioMateriaBancoDeDados();
+            //var repositorioMateria = new RepositorioMateriaEmArquivo(contextoDados);
             var repositorioTeste = new RepositorioTesteEmArquivo(contextoDados);
 
             controladores = new Dictionary<string, ControladorBase>();

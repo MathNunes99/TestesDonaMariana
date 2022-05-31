@@ -129,7 +129,9 @@ namespace TestesDonaMariana_WinApp
 
             if (tela.ShowDialog() == DialogResult.OK)
             {
-                Questao questao = tela.Questao;             
+                Questao questao = tela.Questao;
+
+                questao.numero = materiaSelecionada.Numero;
 
                 repositorioMateria.AdicionarQuestao(materiaSelecionada, questao);
 

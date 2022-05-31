@@ -21,15 +21,13 @@ namespace TestesDonaMariana_WinApp
         public Disciplina Disciplina { get; set; }
         public List<Questao> Questoes { get { return questoes; } }
         public int Serie { get; set; }
-        public int contadorQuestao = 1;
+        
 
         public void AdicionarNovaQuestao(Questao questao)
-        {
-            questao.numero = contadorQuestao;
+        {            
             if (Questoes.Exists(x => x.Equals(questao)) == false)
             {
-                Questoes.Add(questao);
-                contadorQuestao++;
+                Questoes.Add(questao);                
             }
                 
         }

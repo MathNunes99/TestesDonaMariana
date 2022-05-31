@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 using TestesDonaMariana_WinApp.Compartilhado;
 
@@ -19,7 +20,7 @@ namespace TestesDonaMariana_WinApp.ModuloDisciplina
         public override void Inserir()
         {
             TelaCadastroDisciplina tela = new TelaCadastroDisciplina();
-
+            
             tela.Disciplina = new Disciplina();
 
             tela.GravarRegistro = repositorioDisciplina.Inserir;
@@ -28,7 +29,11 @@ namespace TestesDonaMariana_WinApp.ModuloDisciplina
 
             if (resultado == DialogResult.OK)
             {
+                
+
                 CarregarDisciplina();
+
+                
             }
         }
 

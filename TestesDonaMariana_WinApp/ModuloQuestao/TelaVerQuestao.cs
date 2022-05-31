@@ -57,7 +57,7 @@ namespace TestesDonaMariana_WinApp.ModuloQuestao
 
             foreach (Questao questao in materia.Questoes)
             {
-                if (questao.numero == questaoSelecionada.numero)
+                if (questao.titulo == questaoSelecionada.titulo)
                 {
                     materia.Questoes.Remove(questao);
                     CarregarQuestoes();
